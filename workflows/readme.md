@@ -1,0 +1,3 @@
+# Workflows
+
+Bruno collections live under this folder. They can be created directly in bruno and landed here without import / export. Git operations are used to keep different collections in the repository in sync. In addition to the normal bruno artifacts in each collection, we suggest creating a `_docs` folder to house non-bruno assets like svg diagrams which are reference by the collection docs in markdown.

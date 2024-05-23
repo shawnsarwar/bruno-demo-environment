@@ -1,0 +1,27 @@
+meta {
+  name: Auth
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://echo.hoppscotch.io/auth
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "grant": "basicAuth",
+    "token": "{{_tokenValue}}"
+  }
+}
+
+vars:post-response {
+  authToken: JSON.parse(res.body.data).token
+}
+
+assert {
+  res.status: eq 200
+  JSON.parse(res.body.data).token: eq sometokenA0k
+}

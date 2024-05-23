@@ -1,0 +1,19 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["collection", "folder", "environment"],
+    "properties": {
+      "collection": { "type": "string" },
+      "folder": { "type": "string" },
+      "environment": { "type": "string" },
+      "env_override": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      }
+    },
+    "additionalProperties": false
+  }
+}

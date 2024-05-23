@@ -1,0 +1,20 @@
+meta {
+  name: GetEntity
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://echo.hoppscotch.io/entity
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+assert {
+  res.status: eq 200
+  req.headers.Authorization: contains {{authToken}}
+}

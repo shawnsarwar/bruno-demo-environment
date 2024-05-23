@@ -1,0 +1,32 @@
+meta {
+  name: Auth
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://echo.hoppscotch.io/auth
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "grant": "basicAuth",
+    "token": "somethings_wrong"
+  }
+}
+
+vars:post-response {
+  authToken: JSON.parse(res.body.data).token
+}
+
+assert {
+  res.status: eq 200
+  JSON.parse(res.body.data).token: eq sometokenA0k
+}
+
+docs {
+  ### Notes
+   - the echo server doesn't support status other than 200 or we'd mock a 403 to fail status as well.
+}

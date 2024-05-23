@@ -1,0 +1,2 @@
+### Diagram tips
+After initial creation of a drawio diagram, make sure to convert it to a .drawio.svg file via the -Convert menu. This allows for a combined file that is renderable as an svg but is still editable by the drawio editor.
