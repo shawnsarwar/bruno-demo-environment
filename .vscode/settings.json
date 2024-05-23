@@ -1,6 +1,5 @@
 {
     "yaml.schemas": {
         "./.devcontainer/test_schema.json": "*.testsuite.yaml"
-        // "file:///workspace/.devcontainer/test_schema.json": "file:///workspace/tests/demo.testsuite.yaml"
     }
 }
